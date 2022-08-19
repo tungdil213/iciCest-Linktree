@@ -91,14 +91,10 @@ html {
 
 @media screen and (min-width: 625px) {
   html {
-    background: url("../images/background-biel.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed; } }
+    background: #504443; } }
 
 body {
-  margin: 0 auto;
+  margin: 0.5em auto;
   max-width: 70ch;
   font-size: 1rem;
   font-weight: 400;
@@ -106,7 +102,7 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: calc(100vh - ( 0.5em * 2)); }
 
 header,
 .header {
@@ -117,7 +113,8 @@ header,
   font-weight: normal; }
 
 main {
-  flex: 1; }
+  flex: 1;
+  background-color: #F2F2F2; }
 
 article header {
   background-color: transparent;
@@ -130,18 +127,12 @@ article header {
   border-top-color: #f2f2f2; }
 
 article {
-  display: flex;
-  flex-direction: column;
   background: white; }
-
-article content {
-  flex: 1;
-  height: 100%; }
 
 footer,
 .footer {
   font-size: 0.75rem;
-  background: #F2F2F2;
+  background: #fff;
   padding: 0.3em 1.5em; }
 
 iframe {
@@ -229,31 +220,21 @@ VERSION:	0.0.1
   --bs-btn-bg: white; }
 
 /*!------------------------------------------------------------------
-[BREADCRUMB STYLESHEET]
+[HEADER STYLESHEET]
 PROJECT:	Ici c'est
 VERSION:	0.0.1
 -------------------------------------------------------------------*/
-/************************************** breadcrumb **************************************/
-.breadcrumb {
+/************************************** header **************************************/
+.pre-title {
   font-weight: normal;
   text-transform: normal;
   color: #000;
   margin: 2rem 0 0rem;
   padding: .3em 0;
-  font-size: 0.75rem; }
-  .breadcrumb a {
-    text-decoration: none; }
-    .breadcrumb a:hover {
-      color: #000; }
-  .breadcrumb .breadcrumb-separator {
-    color: #DD0B15;
-    font-weight: 300; }
-  .breadcrumb .breadcrumb-item {
-    font-weight: 300;
-    text-decoration: none;
-    color: #DD0B15; }
-    .breadcrumb .breadcrumb-item.active {
-      color: #58585F; }
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #A8A8B3; }
 
 /*!------------------------------------------------------------------
 [LANGUAGE-SELECTOR STYLESHEET]

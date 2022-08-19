@@ -1,0 +1,19 @@
+/*!------------------------------------------------------------------
+[HEADER STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+
+/************************************** header **************************************/
+
+.pre-title {
+    font-weight: normal;
+    text-transform: normal;
+    color: $black;
+    margin: 2rem 0 0rem;
+    padding: .3em 0;
+    font-size: $pre-title-font-size;
+    font-weight: 300;
+    text-decoration: none;
+    color: $pre-title-color;
+}

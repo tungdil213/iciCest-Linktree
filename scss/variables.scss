@@ -36,29 +36,24 @@ $border-header-article-color: #f2f2f2;
 $header-article-border-color: #f2f2f2;
 $header-article-border-width: 1px;
 
-$bg-footer-color: #F2F2F2;
+$bg-html: #504443;
 $bg-content-color: #F2F2F2;
-
-$tab-color: true;
-$tab-color-1: if($tab-color, #4ABCA1, #C6C6C6);
-$tab-color-2: if($tab-color, #E26486, #C6C6C6);
-$tab-color-3: if($tab-color, #6F6FE2, #C6C6C6);
-$tab-color-4: if($tab-color, #835D4F, #C6C6C6);
-$tab-color-5: if($tab-color, #E28E6F, #C6C6C6);
-
-
+$bg-footer-color: #fff;
 
 // margin, padding, radius
 $margin: .5em;
 $margin-vertical: .5em;
 $margin-horizontal: 1em;
 
+$body-margin-block: $margin;
+
 $padding: .5em;
 $padding-vertical: .5em;
 $padding-horizontal: 1em;
 $radius: .725em;
 
-$breadcrumb-font-size: $secondary-font-size;
+$pre-title-color: #A8A8B3;
+$pre-title-font-size: $secondary-font-size;
 
 /* boutons */
 $btn-align: $align-content;

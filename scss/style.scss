@@ -12,17 +12,13 @@ html {
 
 @media screen and (min-width: 625px) {
     html {
-        background: url("../images/background-biel.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        background-attachment: fixed;
+        background: $bg-html;
     }
 }
 
 
 body {
-    margin: 0 auto;
+    margin: $body-margin-block auto;
     max-width: 70ch;
     font-size: 1rem;
     font-weight: 400;
@@ -30,7 +26,7 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(100vh - ( #{$body-margin-block} * 2));
 }
 
 header,
@@ -44,6 +40,7 @@ header,
 
 main {
     flex: 1;
+    background-color: $bg-content-color;
 }
 
 article header {
@@ -58,15 +55,9 @@ article header {
 }
 
 article {
-    display: flex;
-    flex-direction: column;
     background: white;
 }
 
-article content {
-    flex: 1;
-    height: 100%;
-}
 
 footer,
 .footer {
