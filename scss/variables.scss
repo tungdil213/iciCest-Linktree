@@ -9,13 +9,7 @@ VERSION:	0.0.1
 -------------------------------------------------------------------*/
 
 // Fonts
-$font-family: 'Fira Sans',
-sans-serif;
-$code-font-family: SFMono-Regular,
-Consolas,
-Liberation Mono,
-Menlo,
-monospace;
+$font-family: 'Fira Sans', sans-serif;
 $line-height: 1.2;
 $main-font-size: 1rem;
 $secondary-font-size: .75rem;
@@ -25,14 +19,12 @@ $align-content: left;
 $white: #FFF !default;
 $black: #000 !default;
 $grey: #58585F !default;
-$grey-dark: #8E8789 !default;
 
 $main-primary-color: #DD0B15 !default;
 $main-primary-color-opacity: rgba($main-primary-color, .2);
 $text-primary-color: #000 !default;
 $bg-header-color: $white;
 $bg-header-article-color: transparent;
-$border-header-article-color: #f2f2f2;
 $header-article-border-color: #f2f2f2;
 $header-article-border-width: 1px;
 
