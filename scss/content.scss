@@ -1,0 +1,14 @@
+.content {
+    background-color: $bg-content-color;
+    padding: ($padding-vertical * 6) ($padding-horizontal * 1.5);
+}
+
+.chapeau {
+    font-weight: bold;
+}
+
+.list-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

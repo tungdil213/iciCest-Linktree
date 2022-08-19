@@ -1,0 +1,24 @@
+{
+  "name": "iciCest-Linktree",
+  "version": "1.0.0",
+  "description": "Projet ici c'est Bienne - Linktree",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tungdil213/Projet-Ici-c-est.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tungdil213/Projet-Ici-c-est/issues"
+  },
+  "homepage": "https://github.com/tungdil213/Projet-Ici-c-est#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,93 @@
+/*!------------------------------------------------------------------
+[VARIABLES STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+
+// Fonts
+$font-family: 'Fira Sans',
+sans-serif;
+$code-font-family: SFMono-Regular,
+Consolas,
+Liberation Mono,
+Menlo,
+monospace;
+$line-height: 1.2;
+$main-font-size: 1rem;
+$secondary-font-size: .75rem;
+$align-content: left;
+
+// Colors
+$white: #FFF !default;
+$black: #000 !default;
+$grey: #58585F !default;
+$grey-dark: #8E8789 !default;
+
+$main-primary-color: #DD0B15 !default;
+$main-primary-color-opacity: rgba($main-primary-color, .2);
+$text-primary-color: #000 !default;
+$bg-header-color: $white;
+$bg-header-article-color: transparent;
+$border-header-article-color: #f2f2f2;
+$header-article-border-color: #f2f2f2;
+$header-article-border-width: 1px;
+
+$bg-footer-color: #F2F2F2;
+$bg-content-color: #F2F2F2;
+
+$tab-color: true;
+$tab-color-1: if($tab-color, #4ABCA1, #C6C6C6);
+$tab-color-2: if($tab-color, #E26486, #C6C6C6);
+$tab-color-3: if($tab-color, #6F6FE2, #C6C6C6);
+$tab-color-4: if($tab-color, #835D4F, #C6C6C6);
+$tab-color-5: if($tab-color, #E28E6F, #C6C6C6);
+
+
+
+// margin, padding, radius
+$margin: .5em;
+$margin-vertical: .5em;
+$margin-horizontal: 1em;
+
+$padding: .5em;
+$padding-vertical: .5em;
+$padding-horizontal: 1em;
+$radius: .725em;
+
+$breadcrumb-font-size: $secondary-font-size;
+
+/* boutons */
+$btn-align: $align-content;
+$btn-bg-color: white;
+$btn-border-radius: $radius;
+$bt-transform: capitalize;
+$bt-font-size: $secondary-font-size;
+
+
+/* language */
+$language-bg-bt-color: white;
+$language-bg-bt-color-active: $main-primary-color;
+$language-bg-bt-color-opacity: rgba($language-bg-bt-color-active, .2);
+$language-bt-color: $grey;
+$language-bt-color-active: white;
+$language-bt-padding: .3em;
+$language-bt-radius: 50%;
+$language-btn-border-width: 1px;
+$language-btn-border-color: $grey;
+$language-margin: $margin;
+$language-bt-transform: $bt-transform;
+$language-bt-font-size: $secondary-font-size;
+
+$btn-bg-color-actif: $main-primary-color;
+
+/* boutons hover */
+$btn-bg-color-hover: $main-primary-color-opacity;
+
+$btn-border-color-hover: $main-primary-color-opacity;
+
+/* footer */
+$footer-font-size: .75rem;

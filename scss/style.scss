@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
+
+html {
+    background: #FFF;
+    color: $text-primary-color;
+    font-family: $font-family;
+    font-size: $main-font-size;
+    line-height: $line-height;
+    overflow-y: scroll;
+
+}
+
+@media screen and (min-width: 625px) {
+    html {
+        background: url("../images/background-biel.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+
+body {
+    margin: 0 auto;
+    max-width: 70ch;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+.header {
+    font-size: 1.5em;
+    padding: .3em $padding-horizontal;
+    color: $main-primary-color;
+    background-color: $bg-header-color;
+    font-weight: normal;
+}
+
+main {
+    flex: 1;
+}
+
+article header {
+    background-color: $bg-header-article-color;
+    color: $black;
+    padding: 0 $padding-horizontal 2.5rem;
+    overflow: hidden;
+    position: relative;
+    border-top: solid;
+    border-top-width: $header-article-border-width;
+    border-top-color: $header-article-border-color;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+article content {
+    flex: 1;
+    height: 100%;
+}
+
+footer,
+.footer {
+    font-size: $footer-font-size;
+    background: $bg-footer-color;
+    padding: .3em ($padding-horizontal * 1.5);
+}
+
+iframe {
+    max-width: 100%;
+}
+
+figure {
+    margin: 2rem 0;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col {
+    width: 100%;
+}
