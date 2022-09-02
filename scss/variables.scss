@@ -18,9 +18,9 @@ $align-content: left;
 // Colors
 $white: #FFF !default;
 $black: #000 !default;
-$grey: #58585F !default;
+$grey: #969696 !default;
 
-$main-primary-color: #DD0B15 !default;
+$main-primary-color: #DB0613 !default;
 $main-primary-color-opacity: rgba($main-primary-color, .2);
 $text-primary-color: #000 !default;
 $bg-header-color: $white;
@@ -70,7 +70,7 @@ $language-bt-transform: $bt-transform;
 $language-bt-font-size: $secondary-font-size;
 
 $btn-bg-color-actif: $main-primary-color;
-
+$btn-border-color: $grey;
 /* boutons hover */
 $btn-bg-color-hover: $main-primary-color-opacity;
 

@@ -3,6 +3,14 @@
     padding: ($padding-vertical * 6) ($padding-horizontal * 1.5);
 }
 
+.content.alert {
+    padding-bottom: 0;
+}
+
+.content.alert + .content {
+    padding-top: $padding-horizontal;
+}
+
 .chapeau {
     font-weight: bold;
 }
