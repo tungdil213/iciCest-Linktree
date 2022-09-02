@@ -83,4 +83,8 @@ VERSION:	0.0.1
     --bs-btn-hover-color: white;
     --bs-btn-border-color: #{$main-primary-color};
     --bs-btn-hover-border-color: #{$main-primary-color};
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
