@@ -1,0 +1,22 @@
+.content {
+    background-color: $bg-content-color;
+    padding: ($padding-vertical * 6) ($padding-horizontal * 1.5);
+}
+
+.content.alert {
+    padding-bottom: 0;
+}
+
+.content.alert + .content {
+    padding-top: $padding-horizontal;
+}
+
+.chapeau {
+    font-weight: bold;
+}
+
+.list-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

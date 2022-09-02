@@ -1,0 +1,329 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+/*!------------------------------------------------------------------
+[VARIABLES STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+/* boutons */
+/* language */
+/* boutons hover */
+/* footer */
+/*!------------------------------------------------------------------
+[TYPOGRAPHIE STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/************************************** typographie **************************************/
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+/************************************** titre **************************************/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit; }
+
+.h1,
+h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  color: #000;
+  font-weight: bold;
+  margin-top: 0.2em; }
+
+.h2,
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400; }
+
+.h3,
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold; }
+
+.h4,
+h4 {
+  font-size: 1rem;
+  font-weight: bold; }
+
+.h5,
+h5 {
+  font-size: 1rem;
+  font-weight: 400; }
+
+.h6,
+h6 {
+  font-size: 1rem;
+  font-weight: 300; }
+
+.text--white {
+  color: white; }
+
+html {
+  background: #FFF;
+  color: #000;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  overflow-y: scroll; }
+
+@media screen and (min-width: 625px) {
+  html {
+    background: #504443; } }
+
+body {
+  margin: 0.5em auto;
+  max-width: 70ch;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - (0.5em * 2));
+  border-radius: 20px;
+  overflow: hidden; }
+
+header,
+.header {
+  font-size: 1.5em;
+  padding: 0.3em 1em;
+  color: #DB0613;
+  background-color: #FFF;
+  font-weight: normal; }
+
+main {
+  flex: 1;
+  background-color: #F2F2F2; }
+
+article header {
+  background-color: transparent;
+  color: #000;
+  padding: 0 1em 2.5rem;
+  overflow: hidden;
+  position: relative;
+  border-top: solid;
+  border-top-width: 1px;
+  border-top-color: #f2f2f2; }
+
+article {
+  background: white; }
+
+footer,
+.footer {
+  font-size: 0.75rem;
+  background: #fff;
+  padding: 0.3em 1.5em; }
+
+iframe {
+  max-width: 100%; }
+
+figure {
+  margin: 2rem 0; }
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%; }
+
+ul {
+  padding-left: 1rem; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.col {
+  width: 100%; }
+
+/*!------------------------------------------------------------------
+[BUTTONS STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/************************************** Boutons **************************************/
+.btn {
+  --bs-btn-padding-x: 3em;
+  --bs-btn-padding-y: 0.5em;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: #212529;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: 0.725em;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: 400;
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color); }
+
+.btn-outline-primary {
+  --bs-btn-color: #DB0613;
+  --bs-btn-border-color: #969696;
+  --bs-btn-hover-color: #DB0613;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #DB0613;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #DB0613;
+  --bs-btn-active-border-color: #DB0613;
+  --bs-btn-disabled-color: #DB0613;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #DB0613;
+  --bs-gradient: none;
+  --bs-btn-bg: white; }
+
+@keyframes glowing {
+  0% {
+    background-color: #DB0613; }
+  50% {
+    background-color: #EA351F; }
+  100% {
+    background-color: #DB0613; } }
+
+.btn-alert {
+  animation: glowing 1300ms infinite;
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+  --bs-btn-border-color: #DB0613;
+  --bs-btn-hover-border-color: #DB0613; }
+  .btn-alert:hover {
+    animation-play-state: paused; }
+
+/*!------------------------------------------------------------------
+[HEADER STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/************************************** header **************************************/
+.pre-title {
+  font-weight: normal;
+  text-transform: normal;
+  color: #000;
+  margin: 2rem 0 0rem;
+  padding: .3em 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #A8A8B3; }
+
+/*!------------------------------------------------------------------
+[LANGUAGE-SELECTOR STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+.language-selector .main .lang {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  justify-content: end;
+  gap: 0.5em; }
+  .language-selector .main .lang .lang-item {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-width: 1px;
+    border-color: transparent; }
+    .language-selector .main .lang .lang-item .lang-item-text {
+      color: #969696;
+      text-transform: capitalize; }
+    .language-selector .main .lang .lang-item.active {
+      background-color: #DB0613;
+      border-color: #DB0613; }
+      .language-selector .main .lang .lang-item.active .lang-item-text {
+        color: white; }
+    .language-selector .main .lang .lang-item:hover {
+      background-color: rgba(219, 6, 19, 0.2); }
+      .language-selector .main .lang .lang-item:hover .lang-item-text {
+        color: #DB0613; }
+
+.language-selector a {
+  text-decoration: none; }
+
+.title {
+  padding: 0.5em 1.5em; }
+
+.content {
+  background-color: #F2F2F2;
+  padding: 3em 1.5em; }
+
+.content.alert {
+  padding-bottom: 0; }
+
+.content.alert + .content {
+  padding-top: 1em; }
+
+.chapeau {
+  font-weight: bold; }
+
+.list-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+
+.pr-1 {
+  padding-right: .5em; }
