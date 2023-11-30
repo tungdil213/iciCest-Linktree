@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/tungdil213/Projet-Ici-c-est#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.19"
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1"
   }
 }
