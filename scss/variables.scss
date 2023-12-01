@@ -22,6 +22,12 @@ $grey: #969696 !default;
 
 $main-primary-color: #DB0613 !default;
 $main-primary-color-opacity: rgba($main-primary-color, .2);
+$main-secondary-color: #FF9900 !default;
+$main-secondary-color-opacity: rgba($main-secondary-color, .2);
+$main-tertiary-color: #2E83DD !default;
+$main-tertiary-color-opacity: rgba($main-tertiary-color, .2);
+$main-quaternary-color: #18CCC9 !default;
+$main-quaternary-color-opacity: rgba($main-quaternary-color, .2);
 $text-primary-color: #000 !default;
 $bg-header-color: $white;
 $bg-header-article-color: transparent;
@@ -50,21 +56,41 @@ $pre-title-font-size: $secondary-font-size;
 /* boutons */
 $btn-align: $align-content;
 $btn-bg-color: white;
+$btn-tonal-color: white;
 $btn-border-radius: $radius;
 $bt-transform: capitalize;
 $bt-font-size: $secondary-font-size;
+$grid-gap: $margin-horizontal;
+$min-height-tonal: 6em;
+
+/* menu icon */
+$menu-icon-color: $main-primary-color;
+$menu-icon-active-color: $white;
+$menu-icon-height: 2px;
+$menu-icon-width:  1.5em;
+$menu-icon-margin: .5em;
+$bg-content-menu-color: $main-primary-color;
+$text-content-menu-color: $white;
+$menu-oppacity-start: 0;
+$menu-oppacity-end: 1;
+$menu-left-start: 100%;
+$menu-left-end: 0;
+$menu-padding-top: 6em;
+$menu-padding-left: 4em;
+$menu-link-transform: uppercase;
+$menu-gap: 0.5em;
 
 
 /* language */
 $language-bg-bt-color: white;
 $language-bg-bt-color-active: $main-primary-color;
 $language-bg-bt-color-opacity: rgba($language-bg-bt-color-active, .2);
-$language-bt-color: $grey;
+$language-bt-color: $main-primary-color;
 $language-bt-color-active: white;
 $language-bt-padding: .3em;
 $language-bt-radius: 50%;
 $language-btn-border-width: 1px;
-$language-btn-border-color: $grey;
+$language-btn-border-color: $main-primary-color;
 $language-margin: $margin;
 $language-bt-transform: $bt-transform;
 $language-bt-font-size: $secondary-font-size;

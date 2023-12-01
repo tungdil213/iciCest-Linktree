@@ -36,7 +36,7 @@ VERSION:	0.0.1
                 align-items: center;
                 border: solid;
                 border-width: $language-btn-border-width;
-                border-color: transparent;
+                border-color: $language-btn-border-color;
 
                 .lang-item-text {
                     color: $language-bt-color;

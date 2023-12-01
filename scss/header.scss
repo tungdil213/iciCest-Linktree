@@ -7,13 +7,87 @@ VERSION:	0.0.1
 /************************************** header **************************************/
 
 .pre-title {
-    font-weight: normal;
-    text-transform: normal;
-    color: $black;
-    margin: 2rem 0 0rem;
-    padding: .3em 0;
-    font-size: $pre-title-font-size;
-    font-weight: 300;
-    text-decoration: none;
-    color: $pre-title-color;
+  color: $pre-title-color; // utilisation cohérente de la variable de couleur
+  margin: 2rem 0 0;
+  padding: 0.3em 0;
+  font-size: $pre-title-font-size;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.header .logo {
+  width: 200px;
+  height: auto;
+  margin-left: 0;
+
+  @media (max-width: 768px) {
+    // Responsive design
+    width: 150px; // taille réduite pour les écrans plus petits
+  }
+}
+
+#navBtn ~ .header {
+  span,
+  span:before,
+  span:after {
+    border-radius: $btn-border-radius;
+    background-color: $menu-icon-color;
+    transition: all 0.3s ease-out;
+  }
+}
+
+#navBtn:checked ~ .header {
+  span,
+  span:before,
+  span:after {
+    background-color: $menu-icon-active-color;
+  }
+
+  span {
+    background-color: transparent;
+  }
+
+  span:before {
+    transform: translateY(0) rotate(-45deg);
+    top: 0;
+  }
+
+  span:after {
+    transform: translateY(0) rotate(45deg);
+    top: 0;
+  }
+}
+
+.header .icon {
+  cursor: pointer;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  position: relative;
+  z-index: 9991;
+
+  span {
+    height: $menu-icon-height;
+    width: $menu-icon-width;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  span:before,
+  span:after {
+    content: '';
+    height: $menu-icon-height;
+    width: 100%;
+    position: absolute;
+  }
+
+  span:before {
+    top: -$menu-icon-margin;
+  }
+
+  span:after {
+    top: $menu-icon-margin;
+  }
 }

@@ -1,89 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ici c'est</title>
-    <link href="./css/main.css" rel="stylesheet" type="text/css">
-    <link href="./fontawesome-free-6.1.1-web/css/fontawesome.min.css" rel="stylesheet">
-    <link href="./fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet">
-</head>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="./fontawesome-free-6.1.1-web/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./fontawesome-free-6.1.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <input type="checkbox" class="navBtn" id="navBtn" />
     <header class="header">
-        <div class="row">
-            <div class="col">
-                <img src="./images/03_Stadt-Biel-Hauptlogo-20190827-Rot-RGB.png" />
-            </div>
-            <div class="col">
-                <section class="language-selector">
-                    <nav class="main">
-                        <ul class="lang">
-                            <li class="lang-item active">
-                                <a href="#" title="FR" hreflang="fr">
-                                    <div class="lang-item-text">
-                                        Fr
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="lang-item">
-                                <a href="#" title="DE" hreflang="de">
-                                    <div class="lang-item-text">
-                                        De
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="lang-item">
-                                <a href="#" title="DE" hreflang="de">
-                                    <div class="lang-item-text">
-                                        It
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
-            </div>
+      <div class="row">
+        <div class="col">
+          <img
+            class="logo"
+            src="./images/03_Stadt-Biel-Hauptlogo-20190827-Rot-RGB.png"
+          />
         </div>
+        <div class="col d-flex align-items-center justify-content-end">
+          <section class="language-selector">
+            <nav class="main">
+              <ul class="lang">
+                <li class="lang-item active">
+                  <a href="#" title="FR" hreflang="fr">
+                    <div class="lang-item-text">Fr</div>
+                  </a>
+                </li>
+                <li class="lang-item">
+                  <a href="#" title="DE" hreflang="de">
+                    <div class="lang-item-text">De</div>
+                  </a>
+                </li>
+                <li class="lang-item">
+                  <a href="#" title="DE" hreflang="de">
+                    <div class="lang-item-text">It</div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <section class="menu">
+            <label class="icon" for="navBtn"><span></span></label>
+          </section>
+        </div>
+      </div>
     </header>
     <main>
-        <article>
-            <header>
-                <div class="pre-title">
-                    Informations importantes
-                </div>
-                <h1>Publications officielles
-                    de la Ville de Bienne</h1>
-            </header>
-            <div class="alert content">
-                <div class="list-link">
-                    <a href="#" class="btn btn-alert text--white">
-                        <i class="fa-solid fa-triangle-exclamation pr-1"></i>
-                        Alert Informations
-                    </a>
-                </div>
-            </div>
-            <div class="content">
-                <div class="list-link">
-                    <a href="#" class="btn btn-outline-primary">Ramassage des déchets, secteur 3</a>
-                    <a href="#" class="btn btn-outline-primary">Evénements Bienne2Go</a>
-                    <a href="#" class="btn btn-outline-primary">Guichet virtuel</a>
-                </div>
-            </div>
-        </article>
-    </main>
-    <footer>
-        <div class="row">
-            <div class="col">
-                Un projet de la ville de Bienne
-            </div>
-            <div class="col">
-
-            </div>
+      <article>
+        <header>
+          <div class="pre-title">Informations importantes</div>
+          <h1>Publications officielles de la Ville de Bienne</h1>
+        </header>
+        <div class="content">
+          <div class="list-link">
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i><span>Evénements Bienne2Go</span></a
+            >
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i><span>Evénements Bienne2Go</span></a
+            >
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i><span>Feuille officielle</span></a
+            >
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i
+              ><span>Twitter Ville de Bienne</span></a
+            >
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i><span>Evénements Bienne2Go</span></a
+            >
+            <a href="#" class="btn btn-tonal">
+              <i class="fa fa-heart d-block"></i>
+              <span>Evénements Bienne2Go</span></a
+            >
+            <a href="#" class="btn btn-tonal"
+              ><i class="fa fa-heart"></i
+              ><span>Ramassage des déchets, secteur 3</span></a
+            >
+          </div>
         </div>
-    </footer>
-</body>
+      </article>
+    </main>
+    <section class="menu-navigation">
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-heart"></i>Ramassage</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-medkit"></i>Evénements</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-heartbeat"></i>Feuille officielle</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-ambulance"></i>Twitter Ville de Bienne</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Evénements</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Ramassage</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Evénements</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Feuille officielle</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Feuille officielle</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-ambulance"></i>Feuille officielle</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <footer>
+      <div class="row">
+        <div class="col">Un projet de la ville de Bienne</div>
+        <div class="col"></div>
+      </div>
+    </footer>
+  </body>
 </html>

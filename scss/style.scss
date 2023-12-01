@@ -29,6 +29,7 @@ body {
     min-height: calc(100vh - (#{$body-margin-block} * 2));
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 header,
@@ -95,3 +96,24 @@ ul {
 .col {
     width: 100%;
 }
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+  }
+
