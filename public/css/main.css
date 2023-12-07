@@ -16,6 +16,7 @@ VERSION:	0.0.1
 -------------------------------------------------------------------*/
 /* boutons */
 /* menu icon */
+/* carousel */
 /* language */
 /* boutons hover */
 /* footer */
@@ -86,7 +87,7 @@ h6 {
   color: white; }
 
 html {
-  background: #FFF;
+  background: #fff;
   color: #000;
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
@@ -114,7 +115,6 @@ body {
 header,
 .header {
   font-size: 1.5em;
-  padding: 0.3em 1em;
   color: #DB0613;
   background-color: #FFF;
   font-weight: normal; }
@@ -124,14 +124,14 @@ main {
   background-color: #F2F2F2; }
 
 article header {
-  background-color: transparent;
+  background-color: #F2F2F2;
   color: #000;
-  padding: 0 1em 2.5rem;
   overflow: hidden;
   position: relative;
   border-top: solid;
   border-top-width: 1px;
-  border-top-color: #f2f2f2; }
+  border-top-color: #f2f2f2;
+  margin-bottom: 0.5em; }
 
 article {
   background: white; }
@@ -140,7 +140,7 @@ footer,
 .footer {
   font-size: 0.75rem;
   background: #fff;
-  padding: 0.3em 1.5em; }
+  padding: 0.6em 2em; }
 
 iframe {
   max-width: 100%; }
@@ -178,6 +178,13 @@ ul {
 
 .justify-content-end {
   justify-content: end; }
+
+.link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
+  .link:hover {
+    color: #91040d; }
 
 /*!------------------------------------------------------------------
 [BUTTONS STYLESHEET]
@@ -314,11 +321,9 @@ VERSION:	0.0.1
 -------------------------------------------------------------------*/
 /************************************** header **************************************/
 .pre-title {
-  color: #A8A8B3;
-  margin: 2rem 0 0;
-  padding: 0.3em 0;
+  color: #000;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: bold;
   text-decoration: none; }
 
 .header .logo {
@@ -480,7 +485,7 @@ VERSION:	0.0.1
       align-items: center;
       transition: all 0.3s ease; }
       .menu-navigation .nav ul li a:hover {
-        color: #DB0613; }
+        color: #d9d9d9; }
       .menu-navigation .nav ul li a .fa {
         margin-right: 0.5em;
         font-size: 1.4em; }
@@ -488,3 +493,147 @@ VERSION:	0.0.1
 .menu-navigation ol,
 .menu-navigation ul {
   list-style: none; }
+
+/*!------------------------------------------------------------------
+[VARIABLES STYLESHEET]
+PROJECT:	Ici c'est
+VERSION:	0.0.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+/* boutons */
+/* menu icon */
+/* carousel */
+/* language */
+/* boutons hover */
+/* footer */
+@keyframes tonext {
+  75%,
+  95%,
+  98% {
+    left: 0; }
+  99% {
+    left: 100%; } }
+
+@keyframes tostart {
+  75%,
+  95%,
+  98% {
+    left: 0; }
+  99% {
+    left: -300%; } }
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center; }
+  97%,
+  99% {
+    scroll-snap-align: none; }
+  100% {
+    scroll-snap-align: center; } }
+
+.carousel {
+  position: relative;
+  aspect-ratio: 16/10; }
+  .carousel ol,
+  .carousel li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; }
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item; }
+    .carousel__slide:nth-child(even) {
+      background-color: #99f; }
+    .carousel__slide::before {
+      content: counter(item);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -40%, 70px);
+      color: #ffffff;
+      font-size: 2em; }
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center; }
+    @media (hover: hover) {
+      .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; }
+        .carousel__snapper:last-child {
+          animation-name: tostart, snap; } }
+    @media (prefers-reduced-motion: reduce) {
+      .carousel__snapper {
+        animation-name: none; } }
+    .carousel__snapper:hover, .carousel__snapper:focus-within {
+      animation-name: none; }
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: calc(1.5rem / -2);
+    left: 0;
+    text-align: center; }
+  .carousel__navigation-list, .carousel__navigation-item {
+    display: inline flex;
+    gap: 0.5em; }
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FFF;
+    background-clip: content-box;
+    border: 2px solid #DB0613;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s; }
+  .carousel::before, .carousel::after, .carousel__prev, .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0; }
+  .carousel::before, .carousel__prev {
+    left: -1rem; }
+  .carousel::after, .carousel__next {
+    right: -1rem; }
+  .carousel::before, .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: transparent;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none; }
+  .carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='#ffffff'/%3E%3C/svg%3E"); }
+  .carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='#ffffff'/%3E%3C/svg%3E"); }

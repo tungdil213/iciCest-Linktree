@@ -1,119 +1,127 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
 
 html {
-    background: #FFF;
-    color: $text-primary-color;
-    font-family: $font-family;
-    font-size: $main-font-size;
-    line-height: $line-height;
-    overflow-y: scroll;
-
+  background: #fff;
+  color: $text-primary-color;
+  font-family: $font-family;
+  font-size: $main-font-size;
+  line-height: $line-height;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 625px) {
-    html {
-        background: $bg-html;
-    }
+  html {
+    background: $bg-html;
+  }
 }
 
-
 body {
-    margin: $body-margin-block auto;
-    max-width: 70ch;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - (#{$body-margin-block} * 2));
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+  margin: $body-margin-block auto;
+  max-width: 70ch;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - (#{$body-margin-block} * 2));
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 header,
 .header {
-    font-size: 1.5em;
-    padding: .3em $padding-horizontal;
-    color: $main-primary-color;
-    background-color: $bg-header-color;
-    font-weight: normal;
+  font-size: 1.5em;
+  color: $main-primary-color;
+  background-color: $bg-header-color;
+  font-weight: normal;
 }
 
 main {
-    flex: 1;
-    background-color: $bg-content-color;
+  flex: 1;
+  background-color: $bg-content-color;
 }
 
 article header {
-    background-color: $bg-header-article-color;
-    color: $black;
-    padding: 0 $padding-horizontal 2.5rem;
-    overflow: hidden;
-    position: relative;
-    border-top: solid;
-    border-top-width: $header-article-border-width;
-    border-top-color: $header-article-border-color;
+  background-color: $bg-content-color;
+  color: $black;
+  overflow: hidden;
+  position: relative;
+  border-top: solid;
+  border-top-width: $header-article-border-width;
+  border-top-color: $header-article-border-color;
+  margin-bottom: $margin;
 }
 
 article {
-    background: white;
+  background: white;
 }
-
 
 footer,
 .footer {
-    font-size: $footer-font-size;
-    background: $bg-footer-color;
-    padding: .3em ($padding-horizontal * 1.5);
+  font-size: $footer-font-size;
+  background: $bg-footer-color;
+  padding: 0.6em ($padding-horizontal * 2);
 }
 
 iframe {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
 ul {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .col {
-    width: 100%;
+  width: 100%;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .d-block {
-    display: block;
+  display: block;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .justify-content-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-content-end {
-    justify-content: end;
-  }
+  justify-content: end;
+}
 
+.font-light {
+
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: darken($main-primary-color, 15%);
+  }
+}

@@ -8,10 +8,8 @@ VERSION:	0.0.1
 
 .pre-title {
   color: $pre-title-color; // utilisation cohérente de la variable de couleur
-  margin: 2rem 0 0;
-  padding: 0.3em 0;
   font-size: $pre-title-font-size;
-  font-weight: 300;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -19,6 +17,7 @@ VERSION:	0.0.1
   width: 200px;
   height: auto;
   margin-left: 0;
+
 
   @media (max-width: 768px) {
     // Responsive design

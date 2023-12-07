@@ -50,7 +50,7 @@ $padding-vertical: .5em;
 $padding-horizontal: 1em;
 $radius: .725em;
 
-$pre-title-color: #A8A8B3;
+$pre-title-color: $black;
 $pre-title-font-size: $secondary-font-size;
 
 /* boutons */
@@ -79,6 +79,32 @@ $menu-padding-top: 6em;
 $menu-padding-left: 4em;
 $menu-link-transform: uppercase;
 $menu-gap: 0.5em;
+
+/* carousel */
+// Variables pour Carousel
+
+// Espacement et dimension
+$carousel-padding-top: 75%; // Ajuster selon besoin
+$carousel-nav-button-size: 1.5rem; // Taille des boutons de navigation
+$carousel-nav-arrow-size: 4rem; // Taille des flèches de navigation
+$carousel-nav-arrow-icon-size: 1.5rem; // Taille des icônes dans les flèches
+$carousel-nav-arrow-margin-top: 37.5%; // Marge supérieure des flèches
+$carousel-nav-arrow-font-size: 2.5rem; // Taille de la police des flèches
+$carousel-nav-arrow-line-height: 4rem; // Hauteur de ligne des flèches
+$carousel-font-size: 2em; // Taille de police à l'intérieur des diapositives
+
+// Couleurs
+$carousel-shadow-color: #00000033; // Couleur de l'ombre (exemple: noir transparent)
+$carousel-shadow-size: 10px; // Taille de l'ombre
+$carousel-slide-bg: #f99; // Couleur de fond par défaut des diapositives
+$carousel-slide-bg-alt: #99f; // Couleur de fond alternative des diapositives
+$carousel-text-color: #ffffff; // Couleur du texte
+$carousel-nav-button-bg: $white; // Couleur de fond des boutons de navigation
+$carousel-nav-button-border: 2px solid $main-primary-color; // Bordure des boutons de navigation
+$carousel-nav-arrow-bg: transparent; // Couleur de fond des flèches
+$carousel-nav-arrow-color: #ffffff; // Couleur des flèches
+$carousel-arrow-fill: #ffffff; // Couleur de remplissage des flèches (SVG)
+
 
 
 /* language */

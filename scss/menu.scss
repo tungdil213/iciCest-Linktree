@@ -39,7 +39,7 @@
           
 
           &:hover {
-            color: $main-primary-color;
+            color: darken($text-content-menu-color, 15%);
           }
 
           .fa {
