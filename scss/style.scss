@@ -25,9 +25,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - (#{$body-margin-block} * 2));
-  border-radius: 20px;
-  overflow: hidden;
+  border-radius: $body-radius;
   position: relative;
+  background: $bg-content-color;
 }
 
 header,
@@ -39,7 +39,7 @@ header,
 }
 
 main {
-  flex: 1;
+  flex: 1 1 auto;
   background-color: $bg-content-color;
 }
 

@@ -29,14 +29,14 @@ $main-tertiary-color-opacity: rgba($main-tertiary-color, .2);
 $main-quaternary-color: #18CCC9 !default;
 $main-quaternary-color-opacity: rgba($main-quaternary-color, .2);
 $text-primary-color: #000 !default;
-$bg-header-color: $white;
+$bg-header-color: transparent;
 $bg-header-article-color: transparent;
 $header-article-border-color: #f2f2f2;
 $header-article-border-width: 1px;
 
 $bg-html: #504443;
 $bg-content-color: #F2F2F2;
-$bg-footer-color: #fff;
+$bg-footer-color: #fff0;
 
 // margin, padding, radius
 $margin: .5em;
@@ -49,6 +49,8 @@ $padding: .5em;
 $padding-vertical: .5em;
 $padding-horizontal: 1em;
 $radius: .725em;
+
+$body-radius: 20px;
 
 $pre-title-color: $black;
 $pre-title-font-size: $secondary-font-size;
@@ -86,9 +88,11 @@ $menu-gap: 0.5em;
 // Espacement et dimension
 $carousel-padding-top: 75%; // Ajuster selon besoin
 $carousel-nav-button-size: 1.5rem; // Taille des boutons de navigation
-$carousel-nav-arrow-size: 4rem; // Taille des flèches de navigation
+$carousel-nav-arrow-size: 30%; // Taille des flèches de navigation
+$carousel-nav-arrow-height: 100%; 
 $carousel-nav-arrow-icon-size: 1.5rem; // Taille des icônes dans les flèches
-$carousel-nav-arrow-margin-top: 37.5%; // Marge supérieure des flèches
+$carousel-nav-arrow-top: 50%; // Position verticale des flèches
+$carousel-nav-arrow-margin-top: 0; // Marge supérieure des flèches
 $carousel-nav-arrow-font-size: 2.5rem; // Taille de la police des flèches
 $carousel-nav-arrow-line-height: 4rem; // Hauteur de ligne des flèches
 $carousel-font-size: 2em; // Taille de police à l'intérieur des diapositives

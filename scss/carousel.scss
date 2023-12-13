@@ -38,6 +38,7 @@
 .carousel {
   position: relative;
   aspect-ratio: 16/10;
+  padding-bottom: 3em;
 
   ol,
   li {
@@ -53,7 +54,7 @@
     bottom: 0;
     left: 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -63,21 +64,44 @@
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: $carousel-slide-bg; // Variable pour couleur de fond
     counter-increment: item;
+    overflow: hidden;
+  }
 
-    &:nth-child(even) {
-      background-color: $carousel-slide-bg-alt; // Variable pour couleur de fond alternative
-    }
+  &__slide__content {
 
-    &::before {
-      content: counter(item);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -40%, 70px);
-      color: $carousel-text-color; // Variable pour couleur de texte
-      font-size: $carousel-font-size; // Variable pour taille de police
+  }
+
+  &__slide__content__image {
+    object-fit: cover;
+  }
+
+  &__slide__content__title {
+    position: absolute;
+    bottom: 0;
+    left: $padding-horizontal * 1.45;
+    right: $padding-horizontal * 1.4;
+    padding: $padding * 2;
+
+    background-color: $white;
+    border-radius: $radius;
+
+    a {
+      font-size: 1.25em;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: darken($main-primary-color, 15%);
+      }
+
+      &::after {
+        content:"→";;
+        color:$main-primary-color;
+        padding-left: .5em;   
+      }
     }
   }
 
@@ -86,23 +110,23 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     scroll-snap-align: center;
 
-    @media (hover: hover) {
-      animation-name: tonext, snap;
-      animation-timing-function: ease;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
+    // @media (hover: hover) {
+    //   animation-name: tonext, snap;
+    //   animation-timing-function: ease;
+    //   animation-duration: 4s;
+    //   animation-iteration-count: infinite;
 
-      &:last-child {
-        animation-name: tostart, snap;
-      }
-    }
+    //   &:last-child {
+    //     animation-name: tostart, snap;
+    //   }
+    // }
 
-    @media (prefers-reduced-motion: reduce) {
-      animation-name: none;
-    }
+    // @media (prefers-reduced-motion: reduce) {
+    //   animation-name: none;
+    // }
 
     &:hover,
     &:focus-within {
@@ -141,10 +165,10 @@
   &__prev,
   &__next {
     position: absolute;
-    top: 0;
+    top: $carousel-nav-arrow-top;
     margin-top: $carousel-nav-arrow-margin-top; // Variable pour marge
     width: $carousel-nav-arrow-size; // Variable pour taille
-    height: $carousel-nav-arrow-size;
+    height: $carousel-nav-arrow-height;
     transform: translateY(-50%);
     border-radius: 50%;
     font-size: 0;

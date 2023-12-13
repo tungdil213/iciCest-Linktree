@@ -11,14 +11,16 @@
   .nav {
     position: absolute;
     top: 0;
+    bottom:0;
     left: $menu-left-start;
 
-    height: 100%;
     width: 100%;
     background: $bg-content-menu-color;
     opacity: $menu-oppacity-start;
     transition: all 0.3s ease;
     padding-top: $menu-padding-top;
+
+    border-radius: $body-radius;
 
     ul {
       position: absolute;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
 PROJECT:	Ici c'est
@@ -109,18 +110,18 @@ body {
   flex-direction: column;
   min-height: calc(100vh - (0.5em * 2));
   border-radius: 20px;
-  overflow: hidden;
-  position: relative; }
+  position: relative;
+  background: #F2F2F2; }
 
 header,
 .header {
   font-size: 1.5em;
   color: #DB0613;
-  background-color: #FFF;
+  background-color: transparent;
   font-weight: normal; }
 
 main {
-  flex: 1;
+  flex: 1 1 auto;
   background-color: #F2F2F2; }
 
 article header {
@@ -139,7 +140,7 @@ article {
 footer,
 .footer {
   font-size: 0.75rem;
-  background: #fff;
+  background: #fff0;
   padding: 0.6em 2em; }
 
 iframe {
@@ -463,13 +464,14 @@ VERSION:	0.0.1
 .menu-navigation .nav {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 100%;
-  height: 100%;
   width: 100%;
   background: #DB0613;
   opacity: 0;
   transition: all 0.3s ease;
-  padding-top: 6em; }
+  padding-top: 6em;
+  border-radius: 20px; }
   .menu-navigation .nav ul {
     position: absolute;
     padding-left: 4em; }
@@ -535,7 +537,8 @@ VERSION:	0.0.1
 
 .carousel {
   position: relative;
-  aspect-ratio: 16/10; }
+  aspect-ratio: 16/10;
+  padding-bottom: 3em; }
   .carousel ol,
   .carousel li {
     list-style: none;
@@ -548,7 +551,7 @@ VERSION:	0.0.1
     bottom: 0;
     left: 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory; }
@@ -556,36 +559,37 @@ VERSION:	0.0.1
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #f99;
-    counter-increment: item; }
-    .carousel__slide:nth-child(even) {
-      background-color: #99f; }
-    .carousel__slide::before {
-      content: counter(item);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -40%, 70px);
-      color: #ffffff;
-      font-size: 2em; }
+    counter-increment: item;
+    overflow: hidden; }
+  .carousel__slide__content__image {
+    object-fit: cover; }
+  .carousel__slide__content__title {
+    position: absolute;
+    bottom: 0;
+    left: 1.45em;
+    right: 1.4em;
+    padding: 1em;
+    background-color: #FFF;
+    border-radius: 0.725em; }
+    .carousel__slide__content__title a {
+      font-size: 1.25em;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      transition: color 0.15s ease-in-out; }
+      .carousel__slide__content__title a:hover {
+        color: #91040d; }
+      .carousel__slide__content__title a::after {
+        content: "→";
+        color: #DB0613;
+        padding-left: .5em; }
   .carousel__snapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     scroll-snap-align: center; }
-    @media (hover: hover) {
-      .carousel__snapper {
-        animation-name: tonext, snap;
-        animation-timing-function: ease;
-        animation-duration: 4s;
-        animation-iteration-count: infinite; }
-        .carousel__snapper:last-child {
-          animation-name: tostart, snap; } }
-    @media (prefers-reduced-motion: reduce) {
-      .carousel__snapper {
-        animation-name: none; } }
     .carousel__snapper:hover, .carousel__snapper:focus-within {
       animation-name: none; }
   .carousel__navigation {
@@ -609,10 +613,10 @@ VERSION:	0.0.1
     transition: transform 0.1s; }
   .carousel::before, .carousel::after, .carousel__prev, .carousel__next {
     position: absolute;
-    top: 0;
-    margin-top: 37.5%;
-    width: 4rem;
-    height: 4rem;
+    top: 50%;
+    margin-top: 0;
+    width: 30%;
+    height: 100%;
     transform: translateY(-50%);
     border-radius: 50%;
     font-size: 0;
