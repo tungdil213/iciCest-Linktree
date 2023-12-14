@@ -1,18 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
 
 html {
-  background: #fff;
+  background: $bg-html;
   color: $text-primary-color;
   font-family: $font-family;
   font-size: $main-font-size;
   line-height: $line-height;
   overflow-y: scroll;
-}
-
-@media screen and (min-width: 625px) {
-  html {
-    background: $bg-html;
-  }
 }
 
 body {
@@ -28,6 +22,7 @@ body {
   border-radius: $body-radius;
   position: relative;
   background: $bg-content-color;
+  overflow: hidden;
 }
 
 header,

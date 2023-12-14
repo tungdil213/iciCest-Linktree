@@ -88,16 +88,12 @@ h6 {
   color: white; }
 
 html {
-  background: #fff;
+  background: #504443;
   color: #000;
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
   overflow-y: scroll; }
-
-@media screen and (min-width: 625px) {
-  html {
-    background: #504443; } }
 
 body {
   margin: 0.5em auto;
@@ -111,7 +107,8 @@ body {
   min-height: calc(100vh - (0.5em * 2));
   border-radius: 20px;
   position: relative;
-  background: #F2F2F2; }
+  background: #F2F2F2;
+  overflow: hidden; }
 
 header,
 .header {
